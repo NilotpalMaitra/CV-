@@ -1,0 +1,293 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Nilotpal Maitra} % Your Name
+\newcommand{\course}{B.Tech} % Your Program
+\newcommand{\roll}{22ECB0F07} % Your Roll No.
+\newcommand{\phone}{7738502164} % Your Phone Number
+\newcommand{\emaila}{nilotpalm2015@gmail.com} %Email 1
+\newcommand{\emailb}{nm22ecb0f07@student.nitw.ac.in} %Email 2
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{2.35cm}{%
+\includegraphics[width=2.35cm,clip]{Mnit_logo_bw.png}
+}
+\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +91-\phone}\\
+  {Roll No.: \roll} & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  \course &  \href{mailto:\emailb}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}}\\
+  {Electronics and Communication Engineering} &  \href{https://yourGithubProfile.com/}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {https://github.com/NilotpalMaitra}} \\
+  {National Institute Of Technology, Warangal} & \href{https://www.yourLinkedinProfile.com/in/}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {https://www.linkedin.com/in/nilotpal-maitra-636018267/}}
+\end{tabularx}
+}
+% \parbox{3.0cm}{%
+% \flushright \includegraphics[width=2cm,clip]{nitp_logo.png}
+% }
+
+
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Institute of Technology, Warangal}{}
+      {Electronics and Communication Engineering}{2022-2026}
+    \resumeSubheading
+      {The British International School, Shanghai}{}
+      {International Baccalaureate, China}{2022}
+    \resumeSubheading
+        {Heidelberg International School, Heidelberg}{}
+        {International Baccalaureate, Germany}{2021}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+
+
+%-----------EXPERIENCE-----------------
+\section{\textbf{Experience}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Technology, Guwahati}{Guwahati,Assam}
+      {Research Intern}{June 2024-August 2024}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {Research Intern under Prof Mr. M.K.Bhuyan and Research Scholar Mr.Pallab Jyoti Dutta on the topic of Deep Learning on Image processing.}
+    \item {I worked on \textbf{Adversarial Unsupervised Domain Adaptation for Hand Gesture Recognition using Thermal Images}, mastering \textbf{TorchSummary, CBAM modules}, and gaining a deep understanding of \textbf{bottleneck blocks, channel attention blocks, feature extractors, classifiers, and domain discriminators}.}
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+    
+    
+      
+  \resumeSubHeadingListEnd
+\vspace{-8.5mm}
+
+
+
+%-----------PROJECTS-----------------
+\section{\textbf{Personal Projects}}
+\resumeSubHeadingListStart
+
+    \resumeProject
+      {Dynamic Pricing using Bayesian Learning using KNIME} %Project Name
+      {Probabilistic Modelling(Standard Deviation, Gaussian Curve Distribution) Machine Learning Project} %Project Name, Location Name
+      {June 2023} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: \textbf{KNIME, Naive Bayes Learner node}, }
+        \item {Implemented a dynamic pricing model using Naive Bayes in KNIME, optimizing real-time pricing based on market conditions, leading to a 15 percent increase in revenue within three months.}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+    \resumeProject
+      {Image restoration using Edge contouring for Anomaly Detection and Enhancement} %Project Name
+      {Xilinx Vivado 2023.2 , Verilog Language Project } %Project Name, Location Name
+      {April 2024} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: Python , Matlab, FPGA Nexys 4 artix-7 board}
+        \item {Engineered a sophisticated \textbf{anomaly detection system to identify metal pieces} in X-ray images, utilizing Verilog coding and AMD Vivado Xilinx software, significantly enhancing diagnostic accuracy for radiologists by 40 percent}
+    \resumeItemListEnd
+    \vspace{-2mm}
+    
+    \resumeProject
+      {Automated Road Damage Detection for Infrastructure} %Project Name
+      {Machine Learning Project  } %Project Name, Location Name
+      {January 2024} %Event Dates
+
+      \resumeItemListStart
+        \item {Tools \& technologies used: \textbf{Roboflow (Bounding Boxes)}, YOLO V8 , Jupyter Notebook, Google Collab}
+        \item {Developed and deployed a road damage classification model with 76 percent accuracy using \textbf{YOLO v8.} The model automatically detects and categorizes road damage from images captured by various devices, utilizing \textbf{bounding boxes} for mapping. Deployed on the Roboflow platform. }
+    \resumeItemListEnd
+    \vspace{-2mm}
+      
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+
+
+
+%-----------Technical skills-----------------
+\section{\textbf{Technical Skills and Interests}}
+ \begin{itemize}[leftmargin=0.05in, label={}]
+    \small{\item{
+     \textbf{Languages}{:C++, Python,Matlab, Verilog,R language, JUPYTER notebook} \\
+     \textbf{Developer Tools}{: KNIME,Blender(3D modelling), Git, GitHub, Jupyter Notebook,R-Studio, Roboflow ,AMD Vivado, VS Code. } \\
+     \textbf{Relevant Courses}{:Machine Learning specialization (by Stanford Online),Machine learning Onramp (MATLAB),Deep learning Onramp(MATLAB)}\\
+     \textbf{Frameworks}{:Numpy, Pandas, Tensorflow, OpenCV, Keras,}Pytorch(Pytorch Lightning)\textbf{, Hugging Face(Tokenization,Pipelining),Kaggle. } \\
+     \textbf{Cloud/Databases}{:Github,Kaggle,Blynk IOT interface } \\
+     \textbf{Soft Skills}{:: Analytical Thinking, Communication, Public Speaking, Networking, Adaptability, Teamwork } \\
+     \textbf{Coursework}{:: Introduction to AI/ML, Data Structures and Algorithms in C++, Python Programming,Design Thinking,Digital Circuit Design, Introduction to FPGA , Verilog Lab. } \\
+     \textbf{Areas of Interest}{:Current Affairs, Geopolitical affairs, Economics, LLM models, Gaming } \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+
+%-----------Positions of Responsibility-----------------
+\section{\textbf{Positions of Responsibility}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+    \resumePOR{Additional Secretary, }{EA and HAM Club}{May 2022-Present} % Position, Club, Tenure Period
+    \item {Worked on 2D PID Controller with regard to the movement of drones (worked on \textbf{MPU6050} gyroscope regarding Kalman Filter), Worked with the\textbf{ ESP32} microcontroller, utilizing it as the flight controller for drone applications.Conducted 4+ events with a combined footfall of 500+ individuals. } 
+    \resumePOR{Volunteer, }{Robotics Club}{May 2022-December 2022} % Position, Club, Tenure Period
+    \item {Completed several Arduino-based projects during the first year, including the development of a Security Alarm System.}
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+%-----------Achievements-----------------
+\section{Achievements}
+\vspace{-0.4mm}
+\begin{itemize}
+    \setlength\itemindent{-2em} % Adjust this value if needed
+    \item \textbf{Smart India Hackathon} \hfill \textit{2023} \\
+    \hspace{0em}Qualified for the second round within the college, conducted by the Ministry of Education.
+    
+    \item \textbf{Dr. Homi Bhabha Balvaidnyanik Competition} \hfill \textit{2016, 2019} \\
+    \hspace{0em}A prestigious government examination conducted by the BARC Research Center in Maharashtra. Achieved qualification for the second round, ranking in the top 7 percent of all competitors in both sixth and ninth grades.
+\end{itemize}
+
+
+
+
+
+
+%-------------------------------------------
+\end{document}
